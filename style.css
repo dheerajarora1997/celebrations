@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    font-family: "Pacifico", cursive;
     height: 90vh;
     background-color: #e2aa01;
     display: flex;
@@ -15,7 +16,6 @@ body {
 }
 
 h1 {
-    font-family: "Pacifico", cursive;
     font-size: clamp(36px, 0.6rem, 100px);
     color: #fff;
     text-shadow: 6px 4px #735b13;
@@ -23,11 +23,18 @@ h1 {
 }
 
 h2 {
-    font-family: "Pacifico", cursive;
     font-size: clamp(26px, 0.2rem, 100px);
     color: #fff;
     text-shadow: 6px 4px #735b13;
     text-transform: capitalize;
+}
+
+a {
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #323232;
 }
 
 [class^=firework-] {
