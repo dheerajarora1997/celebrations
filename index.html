@@ -12,7 +12,7 @@
   <h1></h1>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
-        var pathname = window.location.pathname;
+        var pathname = window.location.search;
         $('h1').text(pathname.replace(/[_\W]+/g, " "));
     </script>
 </body>
