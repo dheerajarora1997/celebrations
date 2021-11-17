@@ -57,7 +57,7 @@
             copyText.setSelectionRange(0, 99999);
             let copyTextValue = copyText.value + '?'+ occasionText + '#' + usernameText;
             navigator.clipboard.writeText(copyTextValue);
-            $('body').append(copyTextValue);
+            window.open(copyTextValue, '_blank');
         }
     </script>
 </body>
