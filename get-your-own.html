@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congrtulations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="name">Username</label>
+                            <input type="text" class="form-control username" placeholder="Enter Username" value="Mickey">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="name">Wish</label>
+                            <input type="text" class="form-control occasion" placeholder="Enter Wish" value="Happy Birthday">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 ">
+                        <div class="input-group mb-3 d-none">
+                            <input type="text" class="form-control" id="copyField" value="https://dheerajarora1997.github.io/celebrations/" readonly>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2" onclick="copyButton()">
+                                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <button class="btn btn-warning" onclick="copyButton()">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script>
+        function copyButton() {
+            let usernameText = $('.username').val().split(' ').join('+');
+            let occasionText = $('.occasion').val().split(' ').join('+');
+            let copyText = document.getElementById("copyField");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            let copyTextValue = copyText.value + '?'+ occasionText + '#' + usernameText;
+            navigator.clipboard.writeText(copyTextValue);
+            $('body').append(copyTextValue);
+        }
+    </script>
+</body>
+
+</html>
